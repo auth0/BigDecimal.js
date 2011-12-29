@@ -1,4 +1,4 @@
-/*!
+/** @preserve
  * Copyright (c) 2011 Daniel Trebbien
  * Portions Copyright (c) 2003 STZ-IDA and PTV AG, Karlsruhe, Germany
  * Portions Copyright (c) 1995-2001 International Business Machines Corporation and others
@@ -11,4 +11,6 @@
  *
  * Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder.
  */
-var BigDecimal = (function () {
+(function () {
+
+var MathContext = (function (){
