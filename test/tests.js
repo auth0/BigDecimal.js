@@ -27,45 +27,45 @@ module("Rounding")
 // What we normally refer to as 'rounding' in 'normal' parlor, in fixed point
 // math apparently is called 'change scale'
 
-test("Rounding 1 - regular", function(){
+test("Rounding by setScale()", function(){
 	var a = new BigDecimal('1234.5678000')
 	//expect(4)
 	equals(
 		a.setScale(4).toString()
 		, '1234.5678'
-		, 'Since tail is zeros, rounding arg is not needed.'
+		, 'Test ROUND_UNNECESSARY'
 	)
 	equals(
 		a.setScale(2, MathContext.prototype.ROUND_HALF_UP).toString()
 		, '1234.57'
-		, 'Since tail is non zeros, rounding Is needed.'
+		, 'Test ROUND_HALF_UP'
 	)
 })
 
 module("Division + Multiplication")
 
-test("+/-E (divide, multiply by 10) - Moving the dot", function(){
+test("Moving the decimal point", function(){
 	var a = new BigDecimal('1234.5678000')
 	//expect(4)
 	equals(
 		a.movePointRight(2).toString()
 		, a.movePointLeft(-2).toString()
-		, 'The dot can be moved in either direction.'
+		, 'Moving the decimal point to the right by 2 is the same as moving it to the left by -2.'
 	)
 	equals(
 		a.movePointRight(-2).toString()
 		, a.movePointLeft(2).toString()
-		, 'The dot can be moved in either direction.'
+		, 'Moving the decimal point to the right by -2 is the same as moving it to the left by 2.'
 	)
 	equals(
 		a.movePointRight(10).toString()
 		, "12345678000000"
-		, 'Moving dot right adds zeros in either direction.'
+		, 'Moving the decimal point to the right by 10 is the same as multiplying by 10^10.'
 	)
 	equals(
 		a.movePointRight(-10).toString()
 		, "0.00000012345678000"
-		, 'Moving dot right adds zeros in either direction.'
+		, 'Moving the decimal point to the right by -10 is the same as dividing by 10^10.'
 	)
 })
 
