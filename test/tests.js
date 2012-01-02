@@ -28,16 +28,39 @@ module("Rounding")
 // math apparently is called 'change scale'
 
 test("Rounding by setScale()", function(){
-	var a = new BigDecimal('1234.5678000')
+	var a = new BigDecimal('1234.3456000')
 	//expect(4)
 	equals(
 		a.setScale(4).toString()
-		, '1234.5678'
+		, '1234.3456'
 		, 'Test ROUND_UNNECESSARY'
 	)
+	raises(
+		function () {
+			a.setScale(3);
+		}
+		, function (e) {
+			return ("round(): Rounding necessary" == e);
+		}
+		, 'Test ROUND_UNNECESSARY (2) - Should raise an exception to indicate that a rounding mode must be specified'
+	)
+	raises(
+		function () {
+			a.setScale(1);
+		}
+		, function (e) {
+			return ("round(): Rounding necessary" == e);
+		}
+		, 'Test ROUND_UNNECESSARY (3) - Should raise an exception to indicate that a rounding mode must be specified'
+	)
 	equals(
-		a.setScale(2, MathContext.prototype.ROUND_HALF_UP).toString()
-		, '1234.57'
+		new BigDecimal('1234.00').setScale(0).toString()
+		, '1234'
+		, 'Test ROUND_UNNECESSARY (4)'
+	)
+	equals(
+		a.setScale(3, MathContext.prototype.ROUND_HALF_UP).toString()
+		, '1234.346'
 		, 'Test ROUND_HALF_UP'
 	)
 })
