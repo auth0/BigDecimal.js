@@ -1,5 +1,5 @@
 return BigDecimal
-})(MathContext) // BidDecimal depends on MathContext
+})(MathContext) // BigDecimal depends on MathContext
 
 if (typeof define === "function" && define.amd != null) {
 	// AMD-loader compatible resource declaration
