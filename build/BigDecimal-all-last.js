@@ -1,4 +1,4 @@
-/*!
+/** @preserve
  * Copyright (c) 2011 Daniel Trebbien
  * Portions Copyright (c) 2003 STZ-IDA and PTV AG, Karlsruhe, Germany
  * Portions Copyright (c) 1995-2001 International Business Machines Corporation and others
@@ -11,7 +11,9 @@
  *
  * Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder.
  */
-var BigDecimal = (function () {
+(function () {
+
+var MathContext = (function (){
 /* Generated from 'MathContext.nrx' 8 Sep 2000 11:07:48 [v2.00] */
 /* Options: Binary Comments Crossref Format Java Logo Strictargs Strictcase Trace2 Verbose3 */
 //--package com.ibm.icu.math;
@@ -687,7 +689,10 @@ var BigDecimal = (function () {
   return false;
   }
 
-/* Generated from 'BigDecimal.nrx' 8 Sep 2000 11:10:50 [v2.00] */
+return MathContext
+})()
+
+var BigDecimal = (function (MathContext) {/* Generated from 'BigDecimal.nrx' 8 Sep 2000 11:10:50 [v2.00] */
 /* Options: Binary Comments Crossref Format Java Logo Strictargs Strictcase Trace2 Verbose3 */
 //--package com.ibm.icu.math;
 //--import java.math.BigInteger;
@@ -5673,8 +5678,18 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   return this;
   }
 
-if (typeof window === "object") {
-	window.BigDecimal = BigDecimal;
+return BigDecimal
+})(MathContext) // BidDecimal depends on MathContext
+
+if (typeof define === "function" && define.amd != null) {
+	// AMD-loader compatible resource declaration
+	// require('bigdecimal') will return JS Object:
+	// {'BigDecimal':BigDecimalPointer, 'MathContext':MathContextPointer}
+	define({'BigDecimal':BigDecimal, 'MathContext':MathContext})
+} else if (typeof this === "object"){
+	// global-polluting outcome.
+	this.BigDecimal = BigDecimal
+	this.MathContext = MathContext
 }
-return BigDecimal;
-}());
+
+}).call(this) // in browser 'this' will be 'window' or simulated window object in AMD-loading scenarios.

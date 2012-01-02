@@ -26,26 +26,7 @@
 <div id="qunit-fixture"></div>
 
 <script type="text/javascript" src="http://code.jquery.com/qunit/qunit-git.js"></script>
-<script type="text/javascript" charset="UTF-8" src="../build/BigDecimal-all-1.0.1.min.js"></script>
-<script type="text/javascript">
-
-test("Calculate E", function () {
-	var scale = 20;
-	var e = new BigDecimal("0");
-	var denominator = new BigDecimal("1");
-	var eBefore = new BigDecimal("-1");
-	var iteration = 1;
-
-	while (!e.equals(eBefore)) {
-		eBefore = e;
-		e = e.add(BigDecimal.prototype.ONE.divide(denominator, scale, BigDecimal.prototype.ROUND_HALF_UP));
-		denominator = denominator.multiply(new BigDecimal(iteration+''));
-		++iteration;
-	}
-
-	equal(e.toString(), "2.71828182845904523536");
-});
-
-</script>
+<script type="text/javascript" charset="UTF-8" src="../build/BigDecimal-all-last.min.js"></script>
+<script type="text/javascript" src="tests.js"></script>
 </body>
 </html>
