@@ -492,7 +492,7 @@
    }
   else if (MathContext.arguments.length != 1)
    {
-    throw "MathContext(): " + MathContext.arguments.length + " arguments given; expected 1 to 4"
+    throw "MathContext(): " + MathContext.arguments.length + " arguments given; expected 1 to 4";
    }
   var setdigits = MathContext.arguments[0];
 
