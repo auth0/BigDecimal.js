@@ -30,7 +30,7 @@ module("Rounding")
 test("Rounding by setScale()", function(){
 	var a = new BigDecimal('1234.3456000')
 	//expect(4)
-	equals(
+	equal(
 		a.setScale(4).toString()
 		, '1234.3456'
 		, 'Test ROUND_UNNECESSARY'
@@ -53,12 +53,12 @@ test("Rounding by setScale()", function(){
 		}
 		, 'Test ROUND_UNNECESSARY (3) - Should raise an exception to indicate that a rounding mode must be specified'
 	)
-	equals(
+	equal(
 		new BigDecimal('1234.00').setScale(0).toString()
 		, '1234'
 		, 'Test ROUND_UNNECESSARY (4)'
 	)
-	equals(
+	equal(
 		a.setScale(3, MathContext.prototype.ROUND_HALF_UP).toString()
 		, '1234.346'
 		, 'Test ROUND_HALF_UP'
@@ -70,22 +70,22 @@ module("Division + Multiplication")
 test("Moving the decimal point", function(){
 	var a = new BigDecimal('1234.5678000')
 	//expect(4)
-	equals(
+	equal(
 		a.movePointRight(2).toString()
 		, a.movePointLeft(-2).toString()
 		, 'Moving the decimal point to the right by 2 is the same as moving it to the left by -2.'
 	)
-	equals(
+	equal(
 		a.movePointRight(-2).toString()
 		, a.movePointLeft(2).toString()
 		, 'Moving the decimal point to the right by -2 is the same as moving it to the left by 2.'
 	)
-	equals(
+	equal(
 		a.movePointRight(10).toString()
 		, "12345678000000"
 		, 'Moving the decimal point to the right by 10 is the same as multiplying by 10^10.'
 	)
-	equals(
+	equal(
 		a.movePointRight(-10).toString()
 		, "0.00000012345678000"
 		, 'Moving the decimal point to the right by -10 is the same as dividing by 10^10.'
@@ -95,7 +95,7 @@ test("Moving the decimal point", function(){
 } // end of var tests = fn
 
 if (typeof define == 'function' && define.amd !== null){
-	define(function(){return tests}) 
+	define(function(){return tests})
 	// this only returns test suite runner pointer.
 	// calling code will have to pass 'window' to it with BigDecimal and MathContext attached
 	// 'window' can be emulated.
