@@ -12,7 +12,7 @@ Except as contained in this notice, the name of a copyright holder shall not be 
 */
 (function () {
 
-var MathContext = (function (){
+var MathContext = (function () {
 /* Generated from 'MathContext.nrx' 8 Sep 2000 11:07:48 [v2.00] */
 /* Options: Binary Comments Crossref Format Java Logo Strictargs Strictcase Trace2 Verbose3 */
 //--package com.ibm.icu.math;
@@ -507,7 +507,7 @@ var MathContext = (function (){
    }
   else if (MathContext.arguments.length != 1)
    {
-    throw "MathContext(): " + MathContext.arguments.length + " arguments given; expected 1 to 4"
+    throw "MathContext(): " + MathContext.arguments.length + " arguments given; expected 1 to 4";
    }
   var setdigits = MathContext.arguments[0];
 
@@ -688,10 +688,11 @@ var MathContext = (function (){
   return false;
   }
 
-return MathContext
-})()
+return MathContext;
+})();
 
-var BigDecimal = (function (MathContext) {/* Generated from 'BigDecimal.nrx' 8 Sep 2000 11:10:50 [v2.00] */
+var BigDecimal = (function (MathContext) {
+/* Generated from 'BigDecimal.nrx' 8 Sep 2000 11:10:50 [v2.00] */
 /* Options: Binary Comments Crossref Format Java Logo Strictargs Strictcase Trace2 Verbose3 */
 //--package com.ibm.icu.math;
 //--import java.math.BigInteger;
@@ -1922,7 +1923,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "abs(): " + abs.arguments.length + " arguments given; expected 0 or 1"
+    throw "abs(): " + abs.arguments.length + " arguments given; expected 0 or 1";
    }
   if (this.ind==this.isneg)
    return this.negate(set);
@@ -1980,7 +1981,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "add(): " + add.arguments.length + " arguments given; expected 1 or 2"
+    throw "add(): " + add.arguments.length + " arguments given; expected 1 or 2";
    }
   var rhs = add.arguments[0];
   //--com.ibm.icu.math.BigDecimal lhs;
@@ -2282,7 +2283,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "compareTo(): " + compareTo.arguments.length + " arguments given; expected 1 or 2"
+    throw "compareTo(): " + compareTo.arguments.length + " arguments given; expected 1 or 2";
    }
   var rhs = compareTo.arguments[0];
   //--int thislength=0;
@@ -2480,7 +2481,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "divide(): " + divide.arguments.length + " arguments given; expected between 1 and 3"
+    throw "divide(): " + divide.arguments.length + " arguments given; expected between 1 and 3";
    }
   var rhs = divide.arguments[0];
   return this.dodivide('D',rhs,set,scale);
@@ -2540,7 +2541,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "divideInteger(): " + divideInteger.arguments.length + " arguments given; expected 1 or 2"
+    throw "divideInteger(): " + divideInteger.arguments.length + " arguments given; expected 1 or 2";
    }
   var rhs = divideInteger.arguments[0];
   // scale 0 to drop .000 when plain
@@ -2602,7 +2603,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "max(): " + max.arguments.length + " arguments given; expected 1 or 2"
+    throw "max(): " + max.arguments.length + " arguments given; expected 1 or 2";
    }
   var rhs = max.arguments[0];
   if ((this.compareTo(rhs,set))>=0)
@@ -2666,7 +2667,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "min(): " + min.arguments.length + " arguments given; expected 1 or 2"
+    throw "min(): " + min.arguments.length + " arguments given; expected 1 or 2";
    }
   var rhs = min.arguments[0];
   if ((this.compareTo(rhs,set))<=0)
@@ -2727,7 +2728,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "multiply(): " + multiply.arguments.length + " arguments given; expected 1 or 2"
+    throw "multiply(): " + multiply.arguments.length + " arguments given; expected 1 or 2";
    }
   var rhs = multiply.arguments[0];
   //--com.ibm.icu.math.BigDecimal lhs;
@@ -2878,7 +2879,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "negate(): " + negate.arguments.length + " arguments given; expected 0 or 1"
+    throw "negate(): " + negate.arguments.length + " arguments given; expected 0 or 1";
    }
   //--com.ibm.icu.math.BigDecimal res;
   var res;
@@ -2943,7 +2944,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "plus(): " + plus.arguments.length + " arguments given; expected 0 or 1"
+    throw "plus(): " + plus.arguments.length + " arguments given; expected 0 or 1";
    }
   // This clones and forces the result to the new settings
   // May return same object
@@ -3034,7 +3035,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "pow(): " + pow.arguments.length + " arguments given; expected 1 or 2"
+    throw "pow(): " + pow.arguments.length + " arguments given; expected 1 or 2";
    }
   var rhs = pow.arguments[0];
   //--int n;
@@ -3065,14 +3066,14 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    {
     if (rhs.ind==this.isneg)
      //--throw new java.lang.ArithmeticException("Negative power:"+" "+rhs.toString());
-     throw "pow(): Negative power: " + rhs.toString()
+     throw "pow(): Negative power: " + rhs.toString();
     workdigits=0;
    }
   else
    {/* non-0 digits */
     if ((rhs.mant.length+rhs.exp)>reqdig)
      //--throw new java.lang.ArithmeticException("Too many digits:"+" "+rhs.toString());
-     throw "pow(): Too many digits: " + rhs.toString()
+     throw "pow(): Too many digits: " + rhs.toString();
 
     /* Round the lhs to DIGITS if need be */
     if (lhs.mant.length>reqdig)
@@ -3172,7 +3173,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "remainder(): " + remainder.arguments.length + " arguments given; expected 1 or 2"
+    throw "remainder(): " + remainder.arguments.length + " arguments given; expected 1 or 2";
    }
   var rhs = remainder.arguments[0];
   return this.dodivide('R',rhs,set,-1);
@@ -3229,7 +3230,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "subtract(): " + subtract.arguments.length + " arguments given; expected 1 or 2"
+    throw "subtract(): " + subtract.arguments.length + " arguments given; expected 1 or 2";
    }
   var rhs = subtract.arguments[0];
   //--com.ibm.icu.math.BigDecimal newrhs;
@@ -3607,7 +3608,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "format(): " + format.arguments.length + " arguments given; expected 2 or 6"
+    throw "format(): " + format.arguments.length + " arguments given; expected 2 or 6";
    }
   var before = format.arguments[0];
   var after = format.arguments[1];
@@ -4216,7 +4217,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   else
    {
-    throw "setScale(): " + setScale.arguments.length + " given; expected 1 or 2"
+    throw "setScale(): " + setScale.arguments.length + " given; expected 1 or 2";
    }
   var scale = setScale.arguments[0];
   //--int ourscale;
@@ -5677,18 +5678,18 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   return this;
   }
 
-return BigDecimal
-})(MathContext) // BidDecimal depends on MathContext
+return BigDecimal;
+})(MathContext); // BigDecimal depends on MathContext
 
 if (typeof define === "function" && define.amd != null) {
 	// AMD-loader compatible resource declaration
 	// require('bigdecimal') will return JS Object:
 	// {'BigDecimal':BigDecimalPointer, 'MathContext':MathContextPointer}
-	define({'BigDecimal':BigDecimal, 'MathContext':MathContext})
+	define({'BigDecimal':BigDecimal, 'MathContext':MathContext});
 } else if (typeof this === "object"){
 	// global-polluting outcome.
-	this.BigDecimal = BigDecimal
-	this.MathContext = MathContext
+	this.BigDecimal = BigDecimal;
+	this.MathContext = MathContext;
 }
 
-}).call(this) // in browser 'this' will be 'window' or simulated window object in AMD-loading scenarios.
+}).call(this); // in browser 'this' will be 'window' or simulated window object in AMD-loading scenarios.

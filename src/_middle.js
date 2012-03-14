@@ -1,4 +1,4 @@
-return MathContext
-})()
+return MathContext;
+})();
 
 var BigDecimal = (function (MathContext) {
