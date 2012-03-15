@@ -522,11 +522,11 @@ var MathContext = (function () {
    }
   {/*select*/
   if (setform==this.SCIENTIFIC)
-   ; // [most common]
+   {} // [most common]
   else if (setform==this.ENGINEERING)
-   ;
+   {}
   else if (setform==this.PLAIN)
-   ;
+   {}
   else{
    throw "MathContext() Bad form value: "+setform;
   }
@@ -687,7 +687,6 @@ var MathContext = (function () {
   }/*r*/
   return false;
   }
-
 return MathContext;
 })();
 
@@ -2146,7 +2145,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
        so we may need to swap the operands. */
     {swaptest:do{/*select*/
     if (rhs.ind==this.iszero)
-     ; // original A bigger
+     {} // original A bigger
     else if ((usellen<userlen)||(lhs.ind==this.iszero))
      { // original B bigger
       t=usel;
@@ -2158,7 +2157,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       res.ind=-res.ind; // and set sign
      }
     else if (usellen>userlen)
-     ; // original A bigger
+     {} // original A bigger
     else{
      {/* logical lengths the same */ // need compare
       /* may still need to swap: compare the strings */
@@ -3651,9 +3650,9 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    this.badarg("format",4,exdigits);
   {/*select*/
   if (exformint==MathContext.prototype.SCIENTIFIC)
-   ;
+   {}
   else if (exformint==MathContext.prototype.ENGINEERING)
-   ;
+   {}
   else if (exformint==(-1))
    exformint=MathContext.prototype.SCIENTIFIC;
    // note PLAIN isn't allowed
@@ -5475,7 +5474,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       }
    }
   else if (mode==this.ROUND_DOWN)
-   ; // never increment
+   {} // never increment
   else if (mode==this.ROUND_UP)
    { // increment if discarded non-zero
     if ((!(this.allzero(oldmant,len))))
@@ -5677,7 +5676,6 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   this.mant=this.ZERO.mant; // canonical mantissa
   return this;
   }
-
 return BigDecimal;
 })(MathContext); // BigDecimal depends on MathContext
 

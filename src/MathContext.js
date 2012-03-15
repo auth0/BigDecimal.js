@@ -507,11 +507,11 @@
    }
   {/*select*/
   if (setform==this.SCIENTIFIC)
-   ; // [most common]
+   {} // [most common]
   else if (setform==this.ENGINEERING)
-   ;
+   {}
   else if (setform==this.PLAIN)
-   ;
+   {}
   else{
    throw "MathContext() Bad form value: "+setform;
   }
@@ -672,4 +672,3 @@
   }/*r*/
   return false;
   }
-
