@@ -333,6 +333,15 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
  BigDecimal.prototype.allzero = allzero;
  BigDecimal.prototype.finish = finish;
 
+ // Convenience methods
+ BigDecimal.prototype.isGreaterThan = isGreaterThan;
+ BigDecimal.prototype.isLessThan = isLessThan;
+ BigDecimal.prototype.isGreaterThanOrEqualTo = isGreaterThanOrEqualTo;
+ BigDecimal.prototype.isLessThanOrEqualTo = isLessThanOrEqualTo;
+ BigDecimal.prototype.isPositive = isPositive;
+ BigDecimal.prototype.isNegative = isNegative;
+ BigDecimal.prototype.isZero = isZero;
+
 
  /* ----- Constants ----- */
  /* properties constant public */ // useful to others
@@ -4983,3 +4992,25 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   this.mant=this.ZERO.mant; // canonical mantissa
   return this;
   }
+
+ function isGreaterThan(other) {
+  return this.compareTo(other) > 0;
+ };
+ function isLessThan(other) {
+  return this.compareTo(other) < 0;
+ };
+ function isGreaterThanOrEqualTo(other) {
+  return this.compareTo(other) >= 0;
+ };
+ function isLessThanOrEqualTo(other) {
+  return this.compareTo(other) <= 0;
+ };
+ function isPositive() {
+  return this.compareTo(BigDecimal.prototype.ZERO) > 0;
+ };
+ function isNegative() {
+  return this.compareTo(BigDecimal.prototype.ZERO) < 0;
+ };
+ function isZero() {
+  return this.equals(BigDecimal.prototype.ZERO);
+ };

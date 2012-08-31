@@ -23,6 +23,24 @@ test("Calculate E", function () {
 	equal(e.toString(), "2.71828182845904523536");
 });
 
+test("Convenience functions", function() {
+	ok(new BigDecimal("1234.5678").isPositive(), "1234.5678 is positive");
+	ok(new BigDecimal("-1234.5678").isNegative(), "-1234.5678 is negative");
+	ok(!BigDecimal.prototype.ZERO.isPositive() &&
+	   !BigDecimal.prototype.ZERO.isNegative(), "BigDecimal.prototype.ZERO is neither positive nor negative");
+	ok(BigDecimal.prototype.ZERO.isZero(), "BigDecimal.prototype.ZERO is zero");
+	ok(new BigDecimal("1234.0000").isLessThan(new BigDecimal("1234.5678")) &&
+	   new BigDecimal("1234.0000").isLessThanOrEqualTo(new BigDecimal("1234.5678")), "1234.0000 is less than 1234.5678");
+	ok(!new BigDecimal("1234.0000").isGreaterThan(new BigDecimal("1234.5678")) &&
+	   !new BigDecimal("1234.0000").isGreaterThanOrEqualTo(new BigDecimal("1234.5678")), "1234.0000 is not greater than 1234.5678");
+	ok(new BigDecimal("1234.5678").isGreaterThan(new BigDecimal("1234.0000")) &&
+	   new BigDecimal("1234.5678").isGreaterThanOrEqualTo(new BigDecimal("1234.0000")), "1234.5678 is greater than 1234.0000");
+	ok(!new BigDecimal("1234.5678").isLessThan(new BigDecimal("1234.0000")) &&
+	   !new BigDecimal("1234.5678").isLessThanOrEqualTo(new BigDecimal("1234.0000")), "1234.5678 is not less than 1234.0000");
+	ok(new BigDecimal("1234.5678").isLessThanOrEqualTo(new BigDecimal("1234.5678")) &&
+	   new BigDecimal("1234.5678").isGreaterThanOrEqualTo(new BigDecimal("1234.5678")), "1234.5678 is less than or equal to itself as well as greater than or equal to itself");
+});
+
 module("Rounding")
 // What we normally refer to as 'rounding' in 'normal' parlor, in fixed point
 // math apparently is called 'change scale'
