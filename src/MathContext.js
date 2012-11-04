@@ -105,7 +105,7 @@
   * @stable ICU 2.0
   */
  //--public static final int PLAIN=0; // [no exponent]
- MathContext.prototype.PLAIN=0; // [no exponent]
+ MathContext.PLAIN = MathContext.prototype.PLAIN = 0; // [no exponent]
 
  /**
   * Standard floating point notation (with scientific exponential
@@ -120,7 +120,7 @@
   * @stable ICU 2.0
   */
  //--public static final int SCIENTIFIC=1; // 1 digit before .
- MathContext.prototype.SCIENTIFIC=1; // 1 digit before .
+ MathContext.SCIENTIFIC = MathContext.prototype.SCIENTIFIC = 1; // 1 digit before .
 
  /**
   * Standard floating point notation (with engineering exponential
@@ -135,7 +135,7 @@
   * @stable ICU 2.0
   */
  //--public static final int ENGINEERING=2; // 1-3 digits before .
- MathContext.prototype.ENGINEERING=2; // 1-3 digits before .
+ MathContext.ENGINEERING = MathContext.prototype.ENGINEERING = 2; // 1-3 digits before .
 
  // The rounding modes match the original BigDecimal class values
  /**
@@ -148,7 +148,7 @@
   * @stable ICU 2.0
   */
  //--public static final int ROUND_CEILING=2;
- MathContext.prototype.ROUND_CEILING=2;
+ MathContext.ROUND_CEILING = MathContext.prototype.ROUND_CEILING = 2;
 
  /**
   * Rounding mode to round towards zero.
@@ -160,7 +160,7 @@
   * @stable ICU 2.0
   */
  //--public static final int ROUND_DOWN=1;
- MathContext.prototype.ROUND_DOWN=1;
+ MathContext.ROUND_DOWN = MathContext.prototype.ROUND_DOWN = 1;
 
  /**
   * Rounding mode to round to a more negative number.
@@ -172,7 +172,7 @@
   * @stable ICU 2.0
   */
  //--public static final int ROUND_FLOOR=3;
- MathContext.prototype.ROUND_FLOOR=3;
+ MathContext.ROUND_FLOOR = MathContext.prototype.ROUND_FLOOR = 3;
 
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
@@ -187,7 +187,7 @@
   * @stable ICU 2.0
   */
  //--public static final int ROUND_HALF_DOWN=5;
- MathContext.prototype.ROUND_HALF_DOWN=5;
+ MathContext.ROUND_HALF_DOWN = MathContext.prototype.ROUND_HALF_DOWN = 5;
 
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
@@ -206,7 +206,7 @@
   * @stable ICU 2.0
   */
  //--public static final int ROUND_HALF_EVEN=6;
- MathContext.prototype.ROUND_HALF_EVEN=6;
+ MathContext.ROUND_HALF_EVEN = MathContext.prototype.ROUND_HALF_EVEN = 6;
 
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
@@ -221,7 +221,7 @@
   * @stable ICU 2.0
   */
  //--public static final int ROUND_HALF_UP=4;
- MathContext.prototype.ROUND_HALF_UP=4;
+ MathContext.ROUND_HALF_UP = MathContext.prototype.ROUND_HALF_UP = 4;
 
  /**
   * Rounding mode to assert that no rounding is necessary.
@@ -234,7 +234,7 @@
   * @stable ICU 2.0
   */
  //--public static final int ROUND_UNNECESSARY=7;
- MathContext.prototype.ROUND_UNNECESSARY=7;
+ MathContext.ROUND_UNNECESSARY = MathContext.prototype.ROUND_UNNECESSARY = 7;
 
  /**
   * Rounding mode to round away from zero.
@@ -246,7 +246,7 @@
   * @stable ICU 2.0
   */
  //--public static final int ROUND_UP=0;
- MathContext.prototype.ROUND_UP=0;
+ MathContext.ROUND_UP = MathContext.prototype.ROUND_UP = 0;
 
 
  /* properties shared */

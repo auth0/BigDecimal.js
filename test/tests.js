@@ -15,7 +15,7 @@ test("Calculate E", function () {
 
 	while (!e.equals(eBefore)) {
 		eBefore = e;
-		e = e.add(BigDecimal.prototype.ONE.divide(denominator, scale, BigDecimal.prototype.ROUND_HALF_UP));
+		e = e.add(BigDecimal.ONE.divide(denominator, scale, BigDecimal.ROUND_HALF_UP));
 		denominator = denominator.multiply(new BigDecimal(iteration+''));
 		++iteration;
 	}
@@ -26,9 +26,9 @@ test("Calculate E", function () {
 test("Convenience functions", function() {
 	ok(new BigDecimal("1234.5678").isPositive(), "1234.5678 is positive");
 	ok(new BigDecimal("-1234.5678").isNegative(), "-1234.5678 is negative");
-	ok(!BigDecimal.prototype.ZERO.isPositive() &&
-	   !BigDecimal.prototype.ZERO.isNegative(), "BigDecimal.prototype.ZERO is neither positive nor negative");
-	ok(BigDecimal.prototype.ZERO.isZero(), "BigDecimal.prototype.ZERO is zero");
+	ok(!BigDecimal.ZERO.isPositive() &&
+	   !BigDecimal.ZERO.isNegative(), "BigDecimal.ZERO is neither positive nor negative");
+	ok(BigDecimal.ZERO.isZero(), "BigDecimal.ZERO is zero");
 	ok(new BigDecimal("1234.0000").isLessThan(new BigDecimal("1234.5678")) &&
 	   new BigDecimal("1234.0000").isLessThanOrEqualTo(new BigDecimal("1234.5678")), "1234.0000 is less than 1234.5678");
 	ok(!new BigDecimal("1234.0000").isGreaterThan(new BigDecimal("1234.5678")) &&
@@ -77,7 +77,7 @@ test("Rounding by setScale()", function(){
 		, 'Test ROUND_UNNECESSARY (4)'
 	)
 	equal(
-		a.setScale(3, MathContext.prototype.ROUND_HALF_UP).toString()
+		a.setScale(3, MathContext.ROUND_HALF_UP).toString()
 		, '1234.346'
 		, 'Test ROUND_HALF_UP'
 	)

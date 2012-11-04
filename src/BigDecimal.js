@@ -352,7 +352,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   * @stable ICU 2.0
   */
  //--public static final int ROUND_CEILING=com.ibm.icu.math.MathContext.ROUND_CEILING;
- BigDecimal.prototype.ROUND_CEILING = MathContext.prototype.ROUND_CEILING;
+ BigDecimal.ROUND_CEILING = BigDecimal.prototype.ROUND_CEILING = MathContext.prototype.ROUND_CEILING;
 
  /**
   * Rounding mode to round towards zero.
@@ -360,7 +360,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   * @stable ICU 2.0
   */
  //--public static final int ROUND_DOWN=com.ibm.icu.math.MathContext.ROUND_DOWN;
- BigDecimal.prototype.ROUND_DOWN = MathContext.prototype.ROUND_DOWN;
+ BigDecimal.ROUND_DOWN = BigDecimal.prototype.ROUND_DOWN = MathContext.prototype.ROUND_DOWN;
 
  /**
   * Rounding mode to round to a more negative number.
@@ -368,7 +368,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   * @stable ICU 2.0
   */
  //--public static final int ROUND_FLOOR=com.ibm.icu.math.MathContext.ROUND_FLOOR;
- BigDecimal.prototype.ROUND_FLOOR = MathContext.prototype.ROUND_FLOOR;
+ BigDecimal.ROUND_FLOOR = BigDecimal.prototype.ROUND_FLOOR = MathContext.prototype.ROUND_FLOOR;
 
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
@@ -377,7 +377,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   * @stable ICU 2.0
   */
  //--public static final int ROUND_HALF_DOWN=com.ibm.icu.math.MathContext.ROUND_HALF_DOWN;
- BigDecimal.prototype.ROUND_HALF_DOWN = MathContext.prototype.ROUND_HALF_DOWN;
+ BigDecimal.ROUND_HALF_DOWN = BigDecimal.prototype.ROUND_HALF_DOWN = MathContext.prototype.ROUND_HALF_DOWN;
 
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
@@ -386,7 +386,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   * @stable ICU 2.0
   */
  //--public static final int ROUND_HALF_EVEN=com.ibm.icu.math.MathContext.ROUND_HALF_EVEN;
- BigDecimal.prototype.ROUND_HALF_EVEN = MathContext.prototype.ROUND_HALF_EVEN;
+ BigDecimal.ROUND_HALF_EVEN = BigDecimal.prototype.ROUND_HALF_EVEN = MathContext.prototype.ROUND_HALF_EVEN;
 
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
@@ -395,7 +395,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   * @stable ICU 2.0
   */
  //--public static final int ROUND_HALF_UP=com.ibm.icu.math.MathContext.ROUND_HALF_UP;
- BigDecimal.prototype.ROUND_HALF_UP = MathContext.prototype.ROUND_HALF_UP;
+ BigDecimal.ROUND_HALF_UP = BigDecimal.prototype.ROUND_HALF_UP = MathContext.prototype.ROUND_HALF_UP;
 
  /**
   * Rounding mode to assert that no rounding is necessary.
@@ -403,7 +403,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   * @stable ICU 2.0
   */
  //--public static final int ROUND_UNNECESSARY=com.ibm.icu.math.MathContext.ROUND_UNNECESSARY;
- BigDecimal.prototype.ROUND_UNNECESSARY = MathContext.prototype.ROUND_UNNECESSARY;
+ BigDecimal.ROUND_UNNECESSARY = BigDecimal.prototype.ROUND_UNNECESSARY = MathContext.prototype.ROUND_UNNECESSARY;
 
  /**
   * Rounding mode to round away from zero.
@@ -411,7 +411,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   * @stable ICU 2.0
   */
  //--public static final int ROUND_UP=com.ibm.icu.math.MathContext.ROUND_UP;
- BigDecimal.prototype.ROUND_UP = MathContext.prototype.ROUND_UP;
+ BigDecimal.ROUND_UP = BigDecimal.prototype.ROUND_UP = MathContext.prototype.ROUND_UP;
 
  /* properties constant private */ // locals
  //--private static final byte ispos=1; // ind: indicates positive (must be 1)
@@ -457,7 +457,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   */
  //--public static final com.ibm.icu.math.BigDecimal ZERO=new com.ibm.icu.math.BigDecimal((long)0); // use long as we want the int constructor
  // .. to be able to use this, for speed
-BigDecimal.prototype.ZERO = new BigDecimal("0");
+BigDecimal.ZERO = BigDecimal.prototype.ZERO = new BigDecimal("0");
 
  /**
   * The <code>BigDecimal</code> constant "1".
@@ -468,7 +468,7 @@ BigDecimal.prototype.ZERO = new BigDecimal("0");
   */
  //--public static final com.ibm.icu.math.BigDecimal ONE=new com.ibm.icu.math.BigDecimal((long)1); // use long as we want the int constructor
  // .. to be able to use this, for speed
-BigDecimal.prototype.ONE = new BigDecimal("1");
+BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
 
  /**
   * The <code>BigDecimal</code> constant "10".
@@ -478,7 +478,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @stable ICU 2.0
   */
  //--public static final com.ibm.icu.math.BigDecimal TEN=new com.ibm.icu.math.BigDecimal(10);
- BigDecimal.prototype.TEN = new BigDecimal("10");
+ BigDecimal.TEN = BigDecimal.prototype.TEN = new BigDecimal("10");
 
  /* ----- Instance properties [all private and immutable] ----- */
  /* properties private */
