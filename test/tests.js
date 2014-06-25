@@ -39,6 +39,7 @@ test("Convenience functions", function (assert) {
 	          !new BigDecimal("1234.5678").isLessThanOrEqualTo(new BigDecimal("1234.0000")), "1234.5678 is not less than 1234.0000");
 	assert.ok(new BigDecimal("1234.5678").isLessThanOrEqualTo(new BigDecimal("1234.5678")) &&
 	          new BigDecimal("1234.5678").isGreaterThanOrEqualTo(new BigDecimal("1234.5678")), "1234.5678 is less than or equal to itself as well as greater than or equal to itself");
+	assert.ok(new BigDecimal("0.000").setScale(2, BigDecimal.prototype.ROUND_HALF_UP).isZero(), "isZero() is independent of scale")
 });
 
 module("Rounding")

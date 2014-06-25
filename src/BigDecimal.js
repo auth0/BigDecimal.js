@@ -5012,5 +5012,5 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
   return this.compareTo(BigDecimal.prototype.ZERO) < 0;
  };
  function isZero() {
-  return this.equals(BigDecimal.prototype.ZERO);
+  return this.compareTo(BigDecimal.prototype.ZERO) === 0;
  };
