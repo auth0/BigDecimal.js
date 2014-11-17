@@ -14,10 +14,13 @@
     "url": "https://github.com/gferrin/BigDecimal.js.git"
   },
   "keywords": [
+    "big-decimal",
     "bigdecimal",
+    "big decimal",
     "big",
     "decimal",
     "floating",
+    "floating point",
     "point"
   ],
   "author": "",
