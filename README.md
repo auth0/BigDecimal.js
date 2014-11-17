@@ -4,6 +4,8 @@ This is a node.js implementation of this [Javascript Library](https://github.com
 var big = require('big-decimal');
 
 var x = new big('1234.5678000');
+
+console.log(new big("1234.0000").isLessThan(new big("1234.5678")));
 ```
 
 This is a copy of version 1.0.1 of the [STZ-IDA JavaScript translation](http://www.stz-ida.de/index.php?option=com_content&view=article&id=18&Itemid=32) of the `com.ibm.icu.math.BigDecimal` and `com.ibm.icu.math.MathContext` Java classes from the ICU4J project.
