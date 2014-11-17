@@ -24,7 +24,7 @@
     "point"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "ICU4J",
   "bugs": {
     "url": "https://github.com/gferrin/BigDecimal.js/issues"
   },
