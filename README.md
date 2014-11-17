@@ -1,3 +1,11 @@
+This is a node.js implementation of this [Javascript Library](https://github.com/dtrebbien/BigDecimal.js)
+
+```js
+var big = require('big-decimal');
+
+x = new big('1234.5678000');
+```
+
 This is a copy of version 1.0.1 of the [STZ-IDA JavaScript translation](http://www.stz-ida.de/index.php?option=com_content&view=article&id=18&Itemid=32) of the `com.ibm.icu.math.BigDecimal` and `com.ibm.icu.math.MathContext` Java classes from the ICU4J project.
 
 ## Version History
