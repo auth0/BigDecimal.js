@@ -1,4 +1,4 @@
 return MathContext;
 })();
 
-var BigDecimal = (function (MathContext) {
+module.exports = BigDecimal = (function (MathContext) {
