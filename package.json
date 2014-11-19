@@ -26,7 +26,7 @@
   "author": "",
   "license": "ICU4J",
   "bugs": {
-    "url": "https://github.com/gferrin/BigDecimal.js/issues"
+    "url": "https://github.com/dtrebbien/BigDecimal.js/issues"
   },
-  "homepage": "https://github.com/gferrin/BigDecimal.js"
+  "homepage": "https://github.com/dtrebbien/BigDecimal.js"
 }
