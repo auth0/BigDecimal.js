@@ -1,4 +1,6 @@
-This is a node.js implementation of this [Javascript Library](https://github.com/dtrebbien/BigDecimal.js)
+## Node.js
+
+To install run: `npm install big-decimal --save`
 
 ```js
 var big = require('big-decimal');
@@ -7,6 +9,11 @@ var x = new big('1234.5678000');
 
 console.log(new big("1234.0000").isLessThan(new big("1234.5678"))); // true
 ```
+
+## Build
+To build the project run: `bash run_closure_compiler.sh` 
+
+## Legacy 
 
 This is a copy of version 1.0.1 of the [STZ-IDA JavaScript translation](http://www.stz-ida.de/index.php?option=com_content&view=article&id=18&Itemid=32) of the `com.ibm.icu.math.BigDecimal` and `com.ibm.icu.math.MathContext` Java classes from the ICU4J project.
 
