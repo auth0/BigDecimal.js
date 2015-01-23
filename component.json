@@ -1,0 +1,19 @@
+{
+  "name": "big-decimal",
+  "version": "1.0.2",
+  "description": "Javascript version of the com.ibm.icu.math.BigDecimal and com.ibm.icu.math.MathContext Java classes from the ICU4J project.",
+  "main": "build/BigDecimal-all-last.js",
+  "scripts": ["build/BigDecimal-all-last.js"],
+  "keywords": [
+    "big-decimal",
+    "bigdecimal",
+    "big decimal",
+    "big",
+    "decimal",
+    "floating",
+    "floating point",
+    "point"
+  ],
+  "author": "",
+  "license": "ICU4J"
+}
